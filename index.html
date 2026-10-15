@@ -4,16 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff8f0">
-  <title>Маленький сюрприз для Каті</title>
+  <title>З днем народження!</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .modal[hidden]{display:none}.restart{min-width:170px}
+    /* Refined greeting: compact, intentional, and easier to read on a phone. */
+    .app{display:block;padding-top:max(30px,env(safe-area-inset-top));padding-bottom:max(30px,env(safe-area-inset-bottom))}
+    .intro{width:min(100%,440px);margin:clamp(28px,8dvh,76px) auto 0;padding:26px 20px 28px;border:1px solid rgba(255,255,255,.74);border-radius:30px;background:rgba(255,250,247,.58);box-shadow:0 20px 55px rgba(92,65,77,.09)}
+    .intro .moon-card{width:96px;height:96px;margin-bottom:14px}.intro .moon-card span{font-size:3.9rem}.intro .moon-card b{right:16px;top:17px}.intro .moon-card em{bottom:17px;left:16px}
+    .intro h1{margin:7px 0 10px;font-size:clamp(2.15rem,10vw,3.25rem)}.intro .lead{margin-bottom:15px}.intro .quiet{margin-top:18px!important}.intro .primary{margin-top:15px}
+    .intro h1 span{color:#c59b55;font-size:.72em;vertical-align:top}
+    body{font-family:"Manrope",ui-rounded,system-ui,sans-serif}.intro h1,.finale h1,.game h1{font-family:"Cormorant Garamond",Georgia,serif;letter-spacing:-.035em}
+    .intro .moon-card{border-radius:48% 52% 48% 52%;background:linear-gradient(135deg,#f7d9cf,#edc8d5);box-shadow:0 16px 30px rgba(183,128,145,.20);transform:rotate(-9deg)}
+    .intro .moon-card span{display:none}.intro .moon-card:before{content:"";width:44px;height:44px;border:3px solid #fffaf7;border-radius:50%;position:absolute;transform:rotate(20deg);box-shadow:inset 12px -1px 0 -7px #edc8d5}.intro .moon-card:after{content:"✦";position:absolute;top:17px;right:15px;color:#bd8c45;font-size:17px;transform:rotate(9deg)}
+    .telegram-tag{position:fixed;z-index:2;bottom:max(16px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);color:#987b87;text-decoration:none;font:600 11px "Manrope",sans-serif;letter-spacing:.08em;opacity:.72}.telegram-tag:hover,.telegram-tag:focus-visible{opacity:1;color:#6d5260}
+    .game .instruction{max-width:34ch!important;margin:14px 0 12px!important;text-align:left;font-size:.88rem;color:#806977}
+    .game .status{text-align:center}
+    .intro{font-family:"Roboto Condensed",ui-sans-serif,system-ui,sans-serif}.intro h1{font-family:"Caveat",cursive!important;font-size:clamp(2.9rem,13vw,4.1rem);font-weight:600;letter-spacing:-.06em;line-height:.92}.intro .lead{font-family:"Roboto Condensed",sans-serif;font-weight:700}.intro .primary{font-family:"Roboto Condensed",sans-serif;font-size:1.08rem;letter-spacing:.01em}
+    /* Greeting layout matching the supplied reference. */
+    .intro{margin:0 auto;padding:0 14px 22px;border:0;border-radius:0;background:transparent;box-shadow:none;text-align:center}
+    .intro .moon-card{width:54px;height:54px;margin:-44px auto 11px;border:4px solid #f2d6df;border-radius:50%;box-shadow:none;background:#f1d5c8;transform:none}.intro .moon-card:before{width:25px;height:25px;border-width:2px;box-shadow:inset 7px -1px 0 -4px #edc8d5}.intro .moon-card:after{font-size:10px;top:7px;right:7px}.intro .moon-card b,.intro .moon-card em{display:none}
+    .intro .eyebrow{font-size:.66rem;letter-spacing:.04em;color:#5c5050;margin:0 0 7px}.intro h1{margin:0 0 9px;font-size:clamp(2.65rem,12vw,3.75rem);line-height:.95}.intro h1 span{color:#c69d55;font-size:.63em}.intro .lead{font-size:1rem;margin:0 0 15px}.intro p:not(.eyebrow){max-width:34ch;font-size:1rem;line-height:1.48;margin-bottom:13px}.intro .quiet{margin-top:10px!important}.intro .primary{width:min(100%,278px);min-height:47px;margin-top:13px;border-radius:999px;background:linear-gradient(105deg,#292529,#4e4b51);box-shadow:0 8px 15px rgba(42,37,41,.24)}
+    /* Restored greeting composition, without a handwritten typeface. */
+    .intro{width:min(100%,440px);margin:clamp(28px,8dvh,76px) auto 0;padding:26px 20px 28px;border:1px solid rgba(255,255,255,.74);border-radius:30px;background:rgba(255,250,247,.58);box-shadow:0 20px 55px rgba(92,65,77,.09);font-family:"Roboto Condensed",ui-sans-serif,system-ui,sans-serif}
+    .intro .moon-card{width:96px;height:96px;margin:0 auto 14px;border:0;border-radius:48% 52% 48% 52%;background:linear-gradient(135deg,#f7d9cf,#edc8d5);box-shadow:0 16px 30px rgba(183,128,145,.20);transform:rotate(-9deg)}.intro .moon-card:before{width:44px;height:44px;border:3px solid #fffaf7;box-shadow:inset 12px -1px 0 -7px #edc8d5}.intro .moon-card:after{font-size:17px;top:17px;right:15px}.intro .moon-card b,.intro .moon-card em{display:block}
+    .intro h1{font-family:"Cormorant Garamond",Georgia,serif!important;font-size:clamp(2.3rem,10vw,3.35rem);font-weight:700;letter-spacing:-.035em;line-height:1.04;margin:7px 0 10px}.intro h1 span{color:#bf7c91;font-size:.72em;vertical-align:top}.intro .lead{font-family:"Roboto Condensed",sans-serif;font-size:1.1rem;margin-bottom:15px}.intro p:not(.eyebrow){max-width:40ch;font-size:1rem;line-height:1.65;margin-bottom:14px}.intro .quiet{margin-top:18px!important}.intro .primary{width:min(100%,310px);margin-top:15px;border-radius:15px;background:#493c45;box-shadow:0 7px 17px #493c4530}
+    .photo-frame{width:112px;height:112px;margin:0 auto 14px;padding:4px;border:2px solid #f0d0dc;border-radius:50%;background:#fff8f0;box-shadow:0 12px 27px rgba(110,72,86,.16);overflow:hidden}.photo-frame img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center}
+  </style>
+  <style>
+    .music-choices{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px}.music-choices button{min-height:48px}.music-note{font-size:.9rem;color:#806977!important;margin-bottom:9px!important}.music-ps{font-size:.76rem!important;line-height:1.45!important;color:#9a7f89!important;margin:0 0 18px!important}.game-head-actions{display:flex;gap:8px}.music-toggle{font-size:15px}
+  </style>
 </head>
 <body>
   <main class="app" aria-live="polite">
     <div class="ambient" aria-hidden="true"><i>✦</i><i>✧</i><i>☾</i><i>✦</i><i>·</i></div>
     <section class="screen intro is-active" id="intro" aria-labelledby="intro-title">
-      <div class="moon-card" aria-hidden="true"><span>☾</span><b>✦</b><em>✧</em></div>
+      <div class="photo-frame"><img src="photo.jpg" alt="Катя"></div>
       <p class="eyebrow">23 грудня 2026</p>
-      <h1 id="intro-title">Привіт, Катю! <span>♡</span></h1>
+      <h1 id="intro-title">Привіт Катя! <span>♡</span></h1>
       <p class="lead">З днем народження! 🎂</p>
       <p>Я підготував для тебе маленький сюрприз. Але спочатку на тебе чекає одна цікава задачка.</p>
       <p class="quiet">Кажуть, що найкращі подарунки іноді починаються з маленької загадки :)</p>
@@ -23,9 +54,9 @@
     <section class="screen game" id="game" aria-labelledby="game-title" hidden>
       <header class="game-head">
         <div><p class="eyebrow">Маленький виклик</p><h1 id="game-title">Задачка для тебе</h1></div>
-        <button class="icon-btn" id="leaveBtn" aria-label="Вийти до привітання" title="Вийти">×</button>
+        <div class="game-head-actions"><button class="icon-btn music-toggle" id="musicBtn" hidden aria-label="Поставити музику на паузу" title="Пауза">❚❚</button><button class="icon-btn" id="leaveBtn" aria-label="Вийти до привітання" title="Вийти">×</button></div>
       </header>
-      <p class="instruction">Обери клітинку, а потім цифру. Початкові цифри змінити не можна.</p>
+      <p class="instruction">Мені здається, ти знаєш, що робити ♡</p>
       <div class="stats" aria-label="Статус гри">
         <span>Час <b id="timer">00:00</b></span><span>Помилки <b id="mistakes">0</b></span>
       </div>
@@ -44,16 +75,23 @@
       <div class="celebrate" aria-hidden="true">✦ <span>✧</span> ✦</div>
       <p class="eyebrow">Завдання виконано</p>
       <h1 id="final-title">Вітаю, ти впоралася! 🎉</h1>
-      <p class="lead">З днем народження, Катю!</p>
+      <p class="lead">З днем народження Катя!</p>
       <p>Бажаю тобі багато щасливих моментів, приємних несподіванок, здійснення мрій і побільше приводів усміхатися.</p>
       <p>А тепер збережи цей маленький секрет. Він потрібен, щоб отримати ще один подарунок :)</p>
       <div class="code-card"><span>Твій секретний код</span><output id="secretCode">KATYA-2312-7Q</output><button class="primary copy" id="copyBtn">Скопіювати код</button></div>
       <p class="quiet" id="copyStatus">Надішли цей код мені в Telegram 😉</p>
+      <button class="secondary restart" id="restartBtn">Пройти ще раз</button>
     </section>
+    <a class="telegram-tag" href="https://t.me/mlp76" target="_blank" rel="noopener noreferrer" aria-label="Відкрити Telegram @mlp76">@mlp76</a>
   </main>
   <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card"><h2 id="modalTitle">Повернутися?</h2><p>Прогрес збережеться на цьому пристрої.</p><div><button class="secondary" id="stayBtn">Залишитися</button><button class="primary" id="confirmLeaveBtn">До привітання</button></div></div>
   </div>
+  <div class="modal" id="musicModal" hidden role="dialog" aria-modal="true" aria-labelledby="musicTitle">
+    <div class="modal-card"><h2 id="musicTitle">Трохи музики?</h2><p class="music-note">Увімкнути музику на час пригоди?</p><p class="music-ps">P.S. Не знаю, яка музика тобі подобається, тому взяв треки з твого профілю.</p><div class="music-choices"><button class="primary" id="musicYesBtn">Так, увімкни</button><button class="secondary" id="musicNoBtn">Ні, дякую</button></div></div>
+  </div>
+  <audio id="trackOne" src="music/1709369581_scorpions-send-me-an-angel.mp3" preload="metadata"></audio>
+  <audio id="trackTwo" src="music/Scorpions - Still Loving You - 2015 - Remaster (soundua.com).mp3" preload="metadata"></audio>
   <canvas id="confetti" aria-hidden="true"></canvas>
   <script src="script.js"></script>
 </body>
