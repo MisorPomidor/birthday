@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f0">
+  <title>Маленький сюрприз для Каті</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" aria-live="polite">
+    <div class="ambient" aria-hidden="true"><i>✦</i><i>✧</i><i>☾</i><i>✦</i><i>·</i></div>
+    <section class="screen intro is-active" id="intro" aria-labelledby="intro-title">
+      <div class="moon-card" aria-hidden="true"><span>☾</span><b>✦</b><em>✧</em></div>
+      <p class="eyebrow">23 грудня 2026</p>
+      <h1 id="intro-title">Привіт, Катю! <span>♡</span></h1>
+      <p class="lead">З днем народження! 🎂</p>
+      <p>Я підготував для тебе маленький сюрприз. Але спочатку на тебе чекає одна цікава задачка.</p>
+      <p class="quiet">Кажуть, що найкращі подарунки іноді починаються з маленької загадки :)</p>
+      <button class="primary" id="startBtn">Почати пригоду <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="screen game" id="game" aria-labelledby="game-title" hidden>
+      <header class="game-head">
+        <div><p class="eyebrow">Маленький виклик</p><h1 id="game-title">Задачка для тебе</h1></div>
+        <button class="icon-btn" id="leaveBtn" aria-label="Вийти до привітання" title="Вийти">×</button>
+      </header>
+      <p class="instruction">Обери клітинку, а потім цифру. Початкові цифри змінити не можна.</p>
+      <div class="stats" aria-label="Статус гри">
+        <span>Час <b id="timer">00:00</b></span><span>Помилки <b id="mistakes">0</b></span>
+      </div>
+      <div class="progress-wrap"><div class="progress" id="progress" style="width:0%"></div></div>
+      <p class="status" id="status" role="status">Спокійно, уважно — і все вийде ✦</p>
+      <div class="board" id="board" role="grid" aria-label="Судоку 9 на 9"></div>
+      <div class="keypad" id="keypad" aria-label="Цифрова панель"></div>
+      <div class="game-actions">
+        <button class="secondary" id="eraseBtn">Стерти</button>
+        <button class="secondary" id="undoBtn">Скасувати</button>
+        <button class="secondary hint" id="hintBtn">Підказка <span id="hintsLeft">2</span></button>
+      </div>
+    </section>
+
+    <section class="screen finale" id="finale" aria-labelledby="final-title" hidden>
+      <div class="celebrate" aria-hidden="true">✦ <span>✧</span> ✦</div>
+      <p class="eyebrow">Завдання виконано</p>
+      <h1 id="final-title">Вітаю, ти впоралася! 🎉</h1>
+      <p class="lead">З днем народження, Катю!</p>
+      <p>Бажаю тобі багато щасливих моментів, приємних несподіванок, здійснення мрій і побільше приводів усміхатися.</p>
+      <p>А тепер збережи цей маленький секрет. Він потрібен, щоб отримати ще один подарунок :)</p>
+      <div class="code-card"><span>Твій секретний код</span><output id="secretCode">KATYA-2312-7Q</output><button class="primary copy" id="copyBtn">Скопіювати код</button></div>
+      <p class="quiet" id="copyStatus">Надішли цей код мені в Telegram 😉</p>
+    </section>
+  </main>
+  <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><h2 id="modalTitle">Повернутися?</h2><p>Прогрес збережеться на цьому пристрої.</p><div><button class="secondary" id="stayBtn">Залишитися</button><button class="primary" id="confirmLeaveBtn">До привітання</button></div></div>
+  </div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
